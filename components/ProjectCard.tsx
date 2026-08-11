@@ -34,17 +34,16 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.description}
         </p>
 
-        <div className="mt-5">
+        {/* Tags, links, and note travel to the bottom as one group, so they
+            stay together instead of the tags hugging the description. */}
+        <div className="mt-auto pt-6">
           <TagList tags={project.tags} />
-        </div>
 
-        {/* Push links and note to the bottom so cards line up in the grid. */}
-        <div className="mt-auto">
           {project.links && project.links.length > 0 && (
-            <ul className="mt-5 space-y-2">
-              {project.links.map((link, i) => (
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {project.links.map((link) => (
                 <li key={link.href}>
-                  <ProjectLink href={link.href} primary={i === 0}>
+                  <ProjectLink href={link.href} tone={link.tone ?? "accent"}>
                     {link.label}
                   </ProjectLink>
                 </li>
@@ -53,7 +52,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           )}
 
           {project.note && (
-            <p className="mt-5 text-[13px] leading-6 text-faint">
+            <p className="mt-3 text-[13px] leading-6 text-faint">
               {project.note}
             </p>
           )}
@@ -63,18 +62,22 @@ export default function ProjectCard({ project }: { project: Project }) {
   );
 }
 
+const tones = {
+  accent:
+    "border-accent/40 text-accent hover:border-accent hover:bg-accent/10",
+  red: "border-red/40 text-red hover:border-red hover:bg-red/10",
+};
+
 function ProjectLink({
   href,
-  primary,
+  tone,
   children,
 }: {
   href: string;
-  primary: boolean;
+  tone: keyof typeof tones;
   children: React.ReactNode;
 }) {
-  const className = primary
-    ? "inline-block rounded border border-accent/40 px-3 py-1.5 text-[13px] text-accent transition-colors hover:border-accent hover:bg-accent/10"
-    : "text-[13px] text-muted underline decoration-line underline-offset-4 transition-colors hover:text-fg";
+  const className = `inline-block rounded border px-3 py-1.5 text-[13px] transition-colors ${tones[tone]}`;
 
   // Internal routes get client-side navigation; external ones open in a tab.
   if (href.startsWith("/")) {
