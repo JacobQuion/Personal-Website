@@ -14,7 +14,8 @@ export default function TagList({ tags }: { tags: string[] }) {
               borderColor: `${color}40`,
               backgroundColor: `${color}14`,
             }}
-            className="rounded border px-2 py-0.5 text-[11px] leading-5 lowercase"
+            // No text-transform: tags render exactly as written in the data.
+            className="rounded border px-2 py-0.5 text-[11px] leading-5"
           >
             {tag}
           </li>
