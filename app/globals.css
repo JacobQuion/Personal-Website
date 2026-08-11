@@ -11,6 +11,8 @@
   --color-accent: #5fbf8e;
   /* Project cards: neutral charcoal, deliberately untinted so they read as
      grey panels against the green-cast page. */
+  /* Softened from pure #ff0000, which fails AA against the card. */
+  --color-red: #e5675e;
   --color-card: #16181a;
   --color-outline: #292c2f;
 
