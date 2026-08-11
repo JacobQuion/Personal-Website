@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  /* Near-black with a green cast. Every surface derives from these tokens. */
+  --color-bg: #060a09;
+  --color-surface: #0b1210;
+  --color-line: #1a2521;
+  --color-fg: #e3ebe7;
+  --color-muted: #92a49d;
+  --color-faint: #72847c;
+  --color-accent: #5fbf8e;
+  /* Project cards: neutral charcoal, deliberately untinted so they read as
+     grey panels against the green-cast page. */
+  --color-card: #16181a;
+  --color-outline: #292c2f;
+
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
+    Consolas, "Liberation Mono", monospace;
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Inter, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  /* Monospace site-wide; long-form post bodies opt back into sans. */
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Blinking caret for the hero typewriter. Height tracks the font size so it
+   stays proportional from the mobile heading up to the desktop one. */
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.caret {
+  height: 1em;
+  translate: 0 0.1em;
+  animation: blink 1.1s steps(1, end) infinite;
+}
+
+/* Waveform layers hold two identical tiles side by side, so shifting by
+   exactly half the element width loops seamlessly. */
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.drift {
+  animation: drift linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .drift,
+  .caret {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
