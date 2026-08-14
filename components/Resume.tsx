@@ -10,18 +10,19 @@ export default function Resume() {
         </h2>
 
         {/* No `toolbar=0`: the browser's own PDF chrome (page count, zoom,
-            download, print) is the point of the embed. The frame is a tall
-            reading window rather than one letter-sized page, so the viewer
-            scrolls through all pages in place. */}
+            download, print) is the point of the embed. On phones the frame
+            takes US Letter proportions so a one-page résumé fills it exactly
+            instead of floating in a tall box; from sm up it's a tall reading
+            window that scrolls if the document ever grows past one page. */}
         <div className="overflow-hidden rounded-lg border border-outline bg-card">
           <object
             data={`${site.resume}#view=FitH`}
             type="application/pdf"
             aria-label="Jacob Quion’s résumé"
-            className="h-[85vh] min-h-[520px] w-full"
+            className="aspect-[8.5/11] w-full sm:aspect-auto sm:h-[85vh] sm:min-h-[520px]"
           >
             {/* Shown when the browser can't render a PDF inline (most mobile). */}
-            <div className="flex h-[85vh] min-h-[520px] w-full flex-col items-center justify-center gap-4 bg-bg px-6 text-center">
+            <div className="flex aspect-[8.5/11] w-full flex-col items-center justify-center gap-4 bg-bg px-6 text-center sm:aspect-auto sm:h-[85vh] sm:min-h-[520px]">
               <p className="text-sm text-muted">
                 Your browser can’t display PDFs inline.
               </p>
