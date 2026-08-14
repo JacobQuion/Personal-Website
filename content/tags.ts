@@ -33,6 +33,7 @@ const overrides: Record<string, string> = {
   swift: "#ee7b57",
   xcode: "#6bb0e5",
   "ui/ux": "#c98ae0",
+  figma: "#a98ae8",
   llms: "#5fc4c4",
   "ai security": "#e07a7a",
   "prompt injections": "#d9b45f",
