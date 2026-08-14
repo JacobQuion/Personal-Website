@@ -40,11 +40,11 @@ export const site = {
    * [square brackets] becomes a link to `introLink`.
    */
   intro:
-    "I’m technical by nature, but I’m most interested in [philanthropy]*. I only work on problems that have a genuine, real-world impact.",
-  introLink: "https://www.youtube.com/@jacobquion.mp4",
+    "I’m technical by nature, but I care most about [philanthropy]*. Great software solves a genuine problem and is accessible to everyone.",
+  introLink: "https://youtu.be/q1L4atKoWcg",
   /** Body copy for the contact section at the bottom of the home page. */
   contactBlurb:
-    "Have a question, request, or just want to chat? Leave a message and I'll respond in <24 hours.",
+    "Have a question, request, or just want to chat? Shoot an email and I'll respond in <24 hours.",
   /** Lives in /public — replace that file to update the embedded résumé. */
   resume: "/jacob-quion-resume.pdf",
   email: "jacobquion@berkeley.edu",
