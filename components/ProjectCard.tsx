@@ -43,13 +43,15 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Body */}
       <div className="flex flex-1 flex-col p-4">
         <p className="text-sm text-fg">{project.tagline}</p>
-        <p className="mt-3 text-[13px] leading-6 text-muted">
+        {/* Clamped on phones only: unclamped, a long description makes one card
+            taller than the viewport. Full text returns at sm and up. */}
+        <p className="mt-3 line-clamp-6 text-[13px] leading-6 text-muted sm:line-clamp-none">
           {project.description}
         </p>
 
         {/* Tags, links, and note travel to the bottom as one group, so they
             stay together instead of the tags hugging the description. */}
-        <div className="mt-auto pt-6">
+        <div className="mt-auto pt-4 sm:pt-6">
           <TagList tags={project.tags} />
 
           {project.links && project.links.length > 0 && (

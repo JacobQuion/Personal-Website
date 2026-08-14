@@ -17,7 +17,7 @@ export default function Nav() {
               browser scrolls to the top of the document. */}
           <a
             href="#top"
-            className="rounded px-1 text-sm font-medium text-fg transition-colors hover:text-accent"
+            className="shrink-0 whitespace-nowrap rounded px-1 text-sm font-medium text-fg transition-colors hover:text-accent"
           >
             {site.name}
           </a>
@@ -27,7 +27,7 @@ export default function Nav() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="rounded px-3 py-1.5 text-muted transition-colors hover:bg-surface hover:text-accent"
+                  className="rounded px-2 py-1.5 text-muted transition-colors hover:bg-surface hover:text-accent sm:px-3"
                 >
                   {link.label}
                 </a>
