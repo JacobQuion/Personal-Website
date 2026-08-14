@@ -7,13 +7,14 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex flex-col rounded-lg border border-outline bg-card transition-colors hover:border-neutral-600">
       {/* Title row */}
-      <header className="flex items-center justify-between gap-3 px-4 py-3">
+      <header className="flex items-center justify-between gap-3 px-3.5 py-3 sm:px-4">
         <h3 className="text-sm font-medium text-fg">{project.title}</h3>
         <SourceBadge source={project.source} />
       </header>
 
       {/* Thumbnail */}
-      <div className="relative mx-4 aspect-[16/10] overflow-hidden rounded border border-outline bg-[#0f1113]">
+      {/* Shallower crop on phones, where a 16/10 block is a third of the card. */}
+      <div className="relative mx-3.5 aspect-[16/9] overflow-hidden rounded border border-outline bg-[#0f1113] sm:mx-4 sm:aspect-[16/10]">
         {project.video ? (
           // Decorative: muted, controlless, and loops like a GIF, so it carries
           // no information the title and description don't already give.
@@ -41,11 +42,11 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-4">
+      <div className="flex flex-1 flex-col p-3.5 sm:p-4">
         <p className="text-sm text-fg">{project.tagline}</p>
         {/* Clamped on phones only: unclamped, a long description makes one card
             taller than the viewport. Full text returns at sm and up. */}
-        <p className="mt-3 line-clamp-6 text-[13px] leading-6 text-muted sm:line-clamp-none">
+        <p className="mt-3 line-clamp-4 text-[13px] leading-6 text-muted sm:line-clamp-none">
           {project.description}
         </p>
 
