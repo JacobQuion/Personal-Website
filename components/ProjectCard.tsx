@@ -14,7 +14,20 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       {/* Thumbnail */}
       <div className="relative mx-4 aspect-[16/10] overflow-hidden rounded border border-outline bg-[#0f1113]">
-        {project.image ? (
+        {project.video ? (
+          // Decorative: muted, controlless, and loops like a GIF, so it carries
+          // no information the title and description don't already give.
+          <video
+            src={project.video}
+            poster={project.image}
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+        ) : project.image ? (
           <Image
             src={project.image}
             alt={project.title}
