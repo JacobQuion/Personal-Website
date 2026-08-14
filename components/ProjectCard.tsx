@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ProjectDescription from "@/components/ProjectDescription";
 import TagList from "@/components/TagList";
 import type { Project } from "@/content/projects";
 
@@ -47,11 +48,9 @@ export default function ProjectCard({ project }: { project: Project }) {
       {/* Body */}
       <div className="flex flex-1 flex-col p-3.5 sm:p-4">
         <p className="text-sm text-fg">{project.tagline}</p>
-        {/* Clamped on phones only: unclamped, a long description makes one card
-            taller than the viewport. Full text returns at sm and up. */}
-        <p className="mt-3 line-clamp-4 text-[13px] leading-6 text-muted sm:line-clamp-none">
-          {project.description}
-        </p>
+        {/* Clamped on phones only, with a toggle: unclamped, a long description
+            makes one card taller than the viewport. Full text at sm and up. */}
+        <ProjectDescription text={project.description} />
 
         {/* Tags, links, and note travel to the bottom as one group, so they
             stay together instead of the tags hugging the description. */}
