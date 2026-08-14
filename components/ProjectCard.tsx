@@ -18,6 +18,9 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.video ? (
           // Decorative: muted, controlless, and loops like a GIF, so it carries
           // no information the title and description don't already give.
+          // `absolute inset-0` rather than `h-full`: iOS Safari won't resolve a
+          // percentage height against an aspect-ratio parent, and the video
+          // then lays out at its intrinsic 960x600 and breaks the card.
           <video
             src={project.video}
             poster={project.image}
@@ -26,7 +29,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             loop
             playsInline
             aria-hidden
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
         ) : project.image ? (
           <Image
