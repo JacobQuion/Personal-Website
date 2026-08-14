@@ -5,8 +5,11 @@ import TagList from "@/components/TagList";
 import type { Project } from "@/content/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
+  // min-w-0: a grid item's automatic minimum is its min-content width, which
+  // WebKit derives from the video inside — that blows the track out past the
+  // viewport and never shrinks back after a rotation.
   return (
-    <article className="group flex flex-col rounded-lg border border-outline bg-card transition-colors hover:border-neutral-600">
+    <article className="group flex min-w-0 flex-col rounded-lg border border-outline bg-card transition-colors hover:border-neutral-600">
       {/* Title row */}
       <header className="flex items-center justify-between gap-3 px-3.5 py-3 sm:px-4">
         <h3 className="text-sm font-medium text-fg">{project.title}</h3>
@@ -46,7 +49,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-3.5 sm:p-4">
+      <div className="flex min-w-0 flex-1 flex-col p-3.5 sm:p-4">
         <p className="text-sm text-fg">{project.tagline}</p>
         {/* Clamped on phones only, with a toggle: unclamped, a long description
             makes one card taller than the viewport. Full text at sm and up. */}
