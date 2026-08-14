@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import { site } from "@/content/site";
 
 /** Same-page jumps. Targets carry scroll-mt to clear this sticky header. */
 const links = [
@@ -11,7 +12,16 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-20 border-b border-line/60 bg-bg/85 backdrop-blur-md">
       <Container size="wide">
-        <nav className="flex h-14 items-center justify-end">
+        <nav className="flex h-14 items-center justify-between gap-4">
+          {/* `#top` is a spec-defined fragment: with no element of that id, the
+              browser scrolls to the top of the document. */}
+          <a
+            href="#top"
+            className="rounded px-1 text-sm font-medium text-fg transition-colors hover:text-accent"
+          >
+            {site.name}
+          </a>
+
           <ul className="flex items-center gap-1 text-sm">
             {links.map((link) => (
               <li key={link.href}>
