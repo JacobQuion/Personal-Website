@@ -6,6 +6,9 @@ export type Project = {
   description: string;
   source: "open" | "closed";
   tags: string[];
+  /** Tags pinned to the left of the buttons, on the link row rather than
+   * the tag row above it. */
+  inlineTags?: string[];
   /** Buttons under the tags, laid out in a row. `tone` picks the color. */
   links?: { label: string; href: string; tone?: "accent" | "red" }[];
   /** Small muted line at the bottom of the card. */
@@ -20,6 +23,19 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  // ── Placeholders (Contour, Station) ──────────────────────────────────
+  // Swap the copy for the real project, drop a thumbnail in /public and add
+  // `image` (plus `video` for a clip), then delete the `note`.
+  {
+    slug: "contour",
+    title: "Contour",
+    tagline: "One-line hook goes here.",
+    description:
+      "TODO — what the project is, what you built, and the one detail worth bragging about. Three or four sentences matches the cards above and keeps the grid rows even.",
+    source: "closed",
+    tags: ["TODO"],
+    note: "Placeholder — replace with a real project.",
+  },
   {
     slug: "sentinel",
     title: "SENTINEL",
@@ -31,6 +47,16 @@ export const projects: Project[] = [
     image: "/sentinel-demo.jpg",
     video: "/sentinel-demo.mp4",
     note: "Closed-source project. Details available upon request.",
+  },
+  {
+    slug: "station",
+    title: "Station",
+    tagline: "One-line hook goes here.",
+    description:
+      "TODO — what the project is, what you built, and the one detail worth bragging about. Three or four sentences matches the cards above and keeps the grid rows even.",
+    source: "closed",
+    tags: ["TODO"],
+    note: "Placeholder — replace with a real project.",
   },
   {
     slug: "beartracks",
@@ -46,13 +72,31 @@ export const projects: Project[] = [
         href: "https://github.com/JacobQuion/BearTracks_iOS_App",
       },
       {
-        label: "Demo",
-        href: "https://youtu.be/TQcKeJbCv2A",
+        label: "Web",
+        href: "https://beartracks-official.vercel.app/#",
         tone: "red",
       },
     ],
     image: "/beartracks-demo.jpg",
     video: "/beartracks-demo.mp4",
+  },
+  {
+    slug: "ghidorah",
+    title: "Ghidorah",
+    tagline: "FRC 7157’s 2025 Robot.",
+    description:
+      "Ghidorah was designed for the 2025 FIRST Robotics Competition: REEFSCAPE. The goal was to place PVC pipes and large yoga balls onto tall poles and nets. The subsystems on the robot were tuned using PID control so the driver could score game pieces with ease. When the driver wasn’t controlling the robot, Ghidorah was able to “auto-align” to scoring positions with the help of computer vision, which allowed the robot to localize itself on the field.",
+    source: "open",
+    tags: ["Robotics", "Computer Vision", "Java"],
+    inlineTags: ["PID"],
+    links: [
+      {
+        label: "View Source on GitHub",
+        href: "https://github.com/Mubotics7157/2025-Onseason",
+      },
+    ],
+    image: "/robot-demo.jpg",
+    video: "/robot-demo.mp4",
   },
   {
     slug: "personal-website",
