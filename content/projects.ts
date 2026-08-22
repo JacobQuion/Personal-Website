@@ -23,7 +23,7 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  // ── Placeholders (Contour, Station) ──────────────────────────────────
+  // ── Placeholder (Contour) ────────────────────────────────────────────
   // Swap the copy for the real project, drop a thumbnail in /public and add
   // `image` (plus `video` for a clip), then delete the `note`.
   {
@@ -33,8 +33,8 @@ export const projects: Project[] = [
     description:
       "TODO — what the project is, what you built, and the one detail worth bragging about. Three or four sentences matches the cards above and keeps the grid rows even.",
     source: "closed",
-    tags: ["TODO"],
-    note: "Placeholder — replace with a real project.",
+    tags: ["AI Agents", "Multiplayer AI", "Memory", "Orchestration", "Sandboxing", "GPT-5.6"],
+    note: "Closed-source project. Details available upon request.",
   },
   {
     slug: "sentinel",
@@ -54,16 +54,19 @@ export const projects: Project[] = [
     tagline: "Personal AI Study Partner.",
     description:
       "In 1955, Northcote Parkinson wrote an essay for The Economist expressing “Work expands so as to fill the time available for its completion.” This idea is now known as “Parkinson’s Law,” which guides many productivity and study techniques. Station is no different, and embraces Parkinson’s Law to its fullest. With direct calendar and canvas integration, Station will automatically handle and prioritize what academics need to get done so you can focus on the work itself.",
-    source: "closed",
-    tags: ["TODO"],
+    source: "open",
+    tags: ["API Requests", "Data Visualization"],
     links: [
+      {
+        label: "View Source on GitHub",
+        href: "https://github.com/JacobQuion/Station-Web-App",
+      },
       {
         label: "Web",
         href: "https://station-smoky.vercel.app/",
         tone: "red",
       },
     ],
-    note: "Placeholder — replace with a real project.",
   },
   {
     slug: "beartracks",
