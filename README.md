@@ -11,4 +11,4 @@ This purpose of this website was to give a visual way for people to view my proj
 - Hyperlinks to contact info for easy access to my socials.
 
 ## **Additional**
-- You can view the live website using this [link](https://jacob-quion.vercel.app/).
+- You can view the live website using this [link](https://jacob-quion.vercel.app/)!
