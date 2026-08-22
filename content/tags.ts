@@ -54,6 +54,12 @@ const overrides: Record<string, string> = {
   api: "#5fc4c4",
   design: "#c98ae0",
   tooling: "#92a49d",
+  java: "#e0975a",
+  robotics: "#5fbf8e",
+  frc: "#6ba6e0",
+  "computer vision": "#c98ae0",
+  pid: "#5fc4c4",
+  todo: "#92a49d",
 };
 
 export function tagColor(tag: string): string {
