@@ -53,7 +53,7 @@ export const projects: Project[] = [
     title: "Station",
     tagline: "Personal AI Study Partner.",
     description:
-      "TODO — what the project is, what you built, and the one detail worth bragging about. Three or four sentences matches the cards above and keeps the grid rows even.",
+      "In 1955, Northcote Parkinson wrote an essay for The Economist expressing “Work expands so as to fill the time available for its completion.” This idea is now known as “Parkinson’s Law,” which guides many productivity and study techniques. Station is no different, and embraces Parkinson’s Law to its fullest. With direct calendar and canvas integration, Station will automatically handle and prioritize what academics need to get done so you can focus on the work itself.",
     source: "closed",
     tags: ["TODO"],
     links: [
