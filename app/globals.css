@@ -77,24 +77,33 @@ body {
   animation: blink 1.1s steps(1, end) infinite;
 }
 
-/* Waveform layers hold two identical tiles side by side, so shifting by
-   exactly half the element width loops seamlessly. */
-@keyframes drift {
-  from {
-    transform: translateX(0);
+/* Pixel-field blocks. Each one swells to --peak and falls back to --dim; the
+   diagonal wavefronts come from the per-block animation-delay, not from here.
+   Both ends rest at --dim so the loop seam is continuous — going straight to
+   --peak at 0% put a hard flash on every block once per cycle. Duration is set
+   per block, from the constant the delays are derived from. */
+@keyframes pixel-sweep {
+  0%,
+  100% {
+    opacity: var(--dim);
   }
-  to {
-    transform: translateX(-50%);
+  12% {
+    opacity: var(--peak);
+  }
+  40% {
+    opacity: var(--dim);
   }
 }
 
-.drift {
-  animation: drift linear infinite;
+.pixel {
+  animation-name: pixel-sweep;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .rise,
-  .drift,
+  .pixel,
   .caret {
     animation: none;
   }
