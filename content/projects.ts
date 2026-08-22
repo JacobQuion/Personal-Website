@@ -51,7 +51,7 @@ export const projects: Project[] = [
   {
     slug: "station",
     title: "Station",
-    tagline: "One-line hook goes here.",
+    tagline: "Personal AI Study Partner.",
     description:
       "TODO — what the project is, what you built, and the one detail worth bragging about. Three or four sentences matches the cards above and keeps the grid rows even.",
     source: "closed",

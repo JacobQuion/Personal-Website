@@ -7,8 +7,8 @@ export type Social = {
   icon: IconName;
 };
 
-// Rendered left to right in the contact section. X sits before the last two so
-// enabling it later doesn't displace them from the right end.
+// Rendered left to right in the contact section. X sits before GitHub so
+// enabling it later doesn't displace it from the right end.
 const socials: Social[] = [
   { label: "Email", href: "mailto:jacobquion@berkeley.edu", icon: "mail" },
   {
@@ -19,11 +19,6 @@ const socials: Social[] = [
   // Set href to your profile URL once you have one and the icon appears.
   { label: "X", href: null, icon: "x" },
   { label: "GitHub", href: "https://github.com/JacobQuion", icon: "github" },
-  {
-    label: "YouTube",
-    href: "https://www.youtube.com/@jacobquion.mp4",
-    icon: "youtube",
-  },
 ];
 
 export const site = {
