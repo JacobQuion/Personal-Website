@@ -51,11 +51,11 @@ export const projects: Project[] = [
   {
     slug: "station",
     title: "Station",
-    tagline: "Personal AI Study Partner.",
+    tagline: "AI Priority Manager.",
     description:
-      "In 1955, Northcote Parkinson wrote an essay for The Economist expressing “Work expands so as to fill the time available for its completion.” This idea is now known as “Parkinson’s Law,” which guides many productivity and study techniques. Station is no different, and embraces Parkinson’s Law to its fullest. With direct calendar and canvas integration, Station will automatically handle and prioritize what academics need to get done so you can focus on the work itself.",
+      "In 1955, Northcote Parkinson wrote an essay for The Economist expressing “Work expands so as to fill the time available for its completion.” This idea is now known as “Parkinson’s Law,” which guides many productivity and study techniques. Station is no different, and embraces Parkinson’s Law to its fullest. With Google Calendar and Canvas integration, Station does the planning for you so you can just focus on the work itself.",
     source: "open",
-    tags: ["API Requests", "Data Visualization"],
+    tags: ["API Requests", "AI Reasoning"],
     links: [
       {
         label: "View Source on GitHub",
@@ -63,10 +63,12 @@ export const projects: Project[] = [
       },
       {
         label: "Web",
-        href: "https://station-smoky.vercel.app/",
+        href: "https://station-landing-page.vercel.app/",
         tone: "red",
       },
     ],
+    image: "/station-demo.jpg",
+    video: "/station-demo.mp4",
   },
   {
     slug: "beartracks",
