@@ -4,7 +4,6 @@ import { site } from "@/content/site";
 /** Same-page jumps. Targets carry scroll-mt to clear this sticky header. */
 const links = [
   { href: "#portfolio", label: "Portfolio" },
-  { href: "#resume", label: "Resume" },
   { href: "#contact", label: "Contact" },
 ];
 

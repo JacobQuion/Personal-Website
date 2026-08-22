@@ -43,7 +43,8 @@ export const site = {
   /** Body copy for the contact section at the bottom of the home page. */
   contactBlurb:
     "Have a question, request, or just want to chat? Shoot an email and I'll respond in <24 hours.",
-  /** Lives in /public — replace that file to update the embedded résumé. */
+  /** Currently unused — the résumé section was removed. The file is still
+      in /public if you want to link it again. */
   resume: "/jacob-quion-resume.pdf",
   email: "jacobquion@berkeley.edu",
   socials,

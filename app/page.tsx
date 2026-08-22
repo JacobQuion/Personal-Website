@@ -2,7 +2,6 @@ import Contact from "@/components/Contact";
 import Container from "@/components/Container";
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
-import Resume from "@/components/Resume";
 import { projects } from "@/content/projects";
 
 export default function HomePage() {
@@ -23,8 +22,6 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
-
-      <Resume />
 
       <Contact />
     </>
