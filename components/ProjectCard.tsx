@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProjectDescription from "@/components/ProjectDescription";
-import TagList from "@/components/TagList";
+import TagList, { Tag } from "@/components/TagList";
 import type { Project } from "@/content/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -60,9 +60,17 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="mt-auto pt-4 sm:pt-6">
           <TagList tags={project.tags} />
 
-          {project.links && project.links.length > 0 && (
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {project.links.map((link) => (
+          {((project.inlineTags?.length ?? 0) > 0 ||
+            (project.links?.length ?? 0) > 0) && (
+            // Inline tags and buttons share one list so they wrap together and
+            // the shorter pills stay centered against the taller buttons.
+            <ul className="mt-3 flex flex-wrap items-center gap-2">
+              {project.inlineTags?.map((tag) => (
+                <li key={tag}>
+                  <Tag tag={tag} />
+                </li>
+              ))}
+              {project.links?.map((link) => (
                 <li key={link.href}>
                   <ProjectLink href={link.href} tone={link.tone ?? "accent"}>
                     {link.label}
