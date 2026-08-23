@@ -30,9 +30,6 @@ export const site = {
   url: "https://example.com",
   description:
     "Personal site of Jacob Quion — engineer, builder, and occasional writer.",
-  /** Sits under the hero headline. Plain text — no markup is parsed. */
-  intro:
-    "I’m a UC Berkeley freshman exploring Agentic AI and LLMs. I’m especially interested in full-stack development and thoughtful UI/UX.",
   /** Currently unused; kept for the next time the intro needs a link. */
   introLink: "https://youtu.be/q1L4atKoWcg",
   /** Body copy for the contact section at the bottom of the home page. */

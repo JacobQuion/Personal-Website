@@ -14,10 +14,6 @@ export default function Hero() {
         <h1 className="text-2xl font-medium tracking-tight sm:text-4xl">
           <Typewriter phrases={site.headlines} />
         </h1>
-
-        <p className="mx-auto mt-8 max-w-2xl text-sm leading-7 text-muted sm:text-base">
-          {site.intro}
-        </p>
       </div>
     </section>
   );

@@ -55,9 +55,6 @@ export default function Typewriter({ phrases }: { phrases: string[] }) {
     return () => clearTimeout(timer);
   }, [text, deleting, index, phrases, reduced]);
 
-  // Reserve exactly the current phrase's width (monospace, so 1 char = 1ch).
-  // The box is centered and the text fills it left to right, which keeps each
-  // finished phrase centered on the page without re-centering per keystroke.
   const active = reduced ? phrases[0] : phrases[index];
 
   return (
@@ -65,13 +62,17 @@ export default function Typewriter({ phrases }: { phrases: string[] }) {
       {/* The animated line is decorative; the real text is exposed below. */}
       <span
         aria-hidden
-        className="relative inline-block whitespace-nowrap text-left align-bottom"
+        className="relative inline-block whitespace-nowrap align-bottom"
       >
         {/* Invisible copy of the full phrase reserves exactly the space the
             browser will use — letter-spacing included, no ch-unit guesswork.
-            The typed text overlays it, so the finished phrase lands centered. */}
+            Without it the heading's width would collapse toward the caret and
+            drag the surrounding layout with it on every keystroke. */}
         <span className="invisible">{active}</span>
-        <span className="absolute left-0 top-0 whitespace-nowrap">
+        {/* The typed text is centered inside that reserved box rather than
+            pinned to its left edge, so the line grows out from the middle and
+            stays centered at every keystroke, not just once a phrase lands. */}
+        <span className="absolute left-1/2 top-0 -translate-x-1/2 whitespace-nowrap">
           {reduced ? phrases[0] : text}
           <span className="caret ml-0.5 inline-block w-[0.6ch] bg-accent align-baseline" />
         </span>
