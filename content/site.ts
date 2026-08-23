@@ -37,7 +37,7 @@ export const site = {
   introLink: "https://youtu.be/q1L4atKoWcg",
   /** Body copy for the contact section at the bottom of the home page. */
   contactBlurb:
-    "Have a question, request, or just want to chat? Shoot an email and I'll respond in <24 hours.",
+    "I'm always free to answer questions or lend a helping hand. Email me and I'll respond in <24 hours.",
   /** Currently unused — the résumé section was removed. The file is still
       in /public if you want to link it again. */
   resume: "/jacob-quion-resume.pdf",
