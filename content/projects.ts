@@ -29,11 +29,13 @@ export const projects: Project[] = [
   {
     slug: "contour",
     title: "Contour",
-    tagline: "One-line hook goes here.",
+    tagline: "Vetoing for Multi-Agentic Tasks.",
     description:
-      "TODO — what the project is, what you built, and the one detail worth bragging about. Three or four sentences matches the cards above and keeps the grid rows even.",
+      "\"Vetoing\" occurs when one AI agent rejects or overrides another AI agent in a collaborative, multi-agent task. This phenomenon exists in activities such as code deployment, writing verification, and any environment where multiple AI agents are collaborating with one another. My study explores the edge cases (the contours) in which vetoing can cause harmful effects in achieving user-defined goals.",
     source: "closed",
     tags: ["AI Agents", "Multiplayer AI", "Memory", "Orchestration", "Sandboxing", "GPT-5.6"],
+    image: "/contour-demo.jpg",
+    video: "/contour-demo.mp4",
     note: "Closed-source project. Details available upon request.",
   },
   {
@@ -51,7 +53,7 @@ export const projects: Project[] = [
   {
     slug: "station",
     title: "Station",
-    tagline: "AI Priority Manager.",
+    tagline: "AI Manager for Academics.",
     description:
       "In 1955, Northcote Parkinson wrote an essay for The Economist expressing “Work expands so as to fill the time available for its completion.” This idea is now known as “Parkinson’s Law,” which guides many productivity and study techniques. Station is no different, and embraces Parkinson’s Law to its fullest. With Google Calendar and Canvas integration, Station does the planning for you so you can just focus on the work itself.",
     source: "open",
