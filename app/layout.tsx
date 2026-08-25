@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   openGraph: {
-    title: `${site.name} — ${site.role}`,
+    title: `${site.name} — ${site.tagline}`,
     description: site.description,
     url: site.url,
     siteName: site.name,

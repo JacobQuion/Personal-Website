@@ -25,9 +25,10 @@ export const site = {
   name: "Jacob Quion",
   /** The hero headline cycles through these, one at a time. */
   headlines: ["Jacob Quion", "UC Berkeley ’30", "Always Learning"],
-  role: "Software Engineer",
-  // Update this once you know your production domain — it powers OG tags.
-  url: "https://example.com",
+  /** Shown after the name in link previews (iMessage, Slack, etc.). */
+  tagline: "Portfolio",
+  // Production domain — powers OG tags and metadataBase.
+  url: "https://jacob-quion.vercel.app",
   description:
     "Personal site of Jacob Quion — engineer, builder, and occasional writer.",
   /** Currently unused; kept for the next time the intro needs a link. */
