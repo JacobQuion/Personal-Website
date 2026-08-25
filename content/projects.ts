@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description:
       "\"Vetoing\" occurs when one AI agent rejects or overrides another AI agent in a collaborative, multi-agent task. This phenomenon exists in activities such as code deployment, writing verification, and any environment where multiple AI agents are collaborating with one another. My study explores the edge cases (the contours) in which vetoing can cause harmful effects in achieving user-defined goals.",
     source: "closed",
-    tags: ["AI Agents", "Multiplayer AI", "Memory", "Orchestration", "Sandboxing", "GPT-5.6"],
+    tags: ["AI Agents", "Multiplayer AI", "Research", "Memory", "Sandboxing", "GPT-5.6"],
     image: "/contour-demo.jpg",
     video: "/contour-demo.mp4",
     note: "Closed-source project. Details available upon request.",
@@ -41,11 +41,11 @@ export const projects: Project[] = [
   {
     slug: "sentinel",
     title: "SENTINEL",
-    tagline: "Diagnosing Encoded LLM Prompts.",
+    tagline: "Diagnosing Foreign LLM Prompts.",
     description:
-      "SENTINEL asks whether a prompt injection detector’s in-distribution accuracy predicts anything about attacks it has never seen. I generated 4,160 documents across 8 attack mechanisms, each with a benign twin of the same surface form, then trained with one mechanism held out and tested on exactly that one. In distribution it scores 1.000 on all eight, but the two families that attack the encoding rather than the language collapse to 0.788 and 0.561.",
+      "A \"prompt injection\" occurs when a malicious instruction infiltrates a LLM. This can lead to a breach in security, causing the model to access sensitive files, tools, or other privileged resources. SENTINEL reveals that training data used to reinforce diagnostic frameworks is inadequate against foreign attacks. In short, we need better approaches to foreign prompt injections.",
     source: "closed",
-    tags: ["LLMs", "AI Security", "Prompt Injections"],
+    tags: ["LLMs", "AI Security", "Research"],
     image: "/sentinel-demo.jpg",
     video: "/sentinel-demo.mp4",
     note: "Closed-source project. Details available upon request.",
