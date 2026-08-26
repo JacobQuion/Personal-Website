@@ -29,8 +29,6 @@ export const site = {
   tagline: "Portfolio",
   // Production domain — powers OG tags and metadataBase.
   url: "https://jacob-quion.vercel.app",
-  description:
-    "Personal site of Jacob Quion — engineer, builder, and occasional writer.",
   /** Currently unused; kept for the next time the intro needs a link. */
   introLink: "https://youtu.be/q1L4atKoWcg",
   /** Body copy for the contact section at the bottom of the home page. */
