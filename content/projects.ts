@@ -51,6 +51,28 @@ export const projects: Project[] = [
     note: "Closed-source project. Details available upon request.",
   },
   {
+    slug: "beartracks",
+    title: "BearTracks",
+    tagline: "Campus In Your Pocket (iOS).",
+    description:
+      "BearTracks is an all-in-one navigation app for UC Berkeley. You can view the best dining halls, study spots, how crowded the community gym is, and what events are happening on campus. The app is iOS-native and collects 0 user data, keeping the app onboarding clean and straightforward. Future improvements will focus on local caching so the app can be used in areas with poor internet coverage (e.g. Main Stacks Basement, Dwinelle Hall).",
+    source: "open",
+    tags: ["iOS", "Figma", "Swift", "Xcode", "UI/UX"],
+    links: [
+      {
+        label: "View Source on GitHub",
+        href: "https://github.com/JacobQuion/BearTracks_iOS_App",
+      },
+      {
+        label: "Web",
+        href: "https://beartracks-official.vercel.app/#",
+        tone: "red",
+      },
+    ],
+    image: "/beartracks-demo.jpg",
+    video: "/beartracks-demo.mp4",
+  },
+  {
     slug: "station",
     title: "Station",
     tagline: "AI Manager for Academics.",
@@ -71,28 +93,6 @@ export const projects: Project[] = [
     ],
     image: "/station-demo.jpg",
     video: "/station-demo.mp4",
-  },
-  {
-    slug: "beartracks",
-    title: "BearTracks",
-    tagline: "Campus In Your Pocket.",
-    description:
-      "BearTracks is an all-in-one navigation app for UC Berkeley. You can view the best dining halls, study spots, how crowded the community gym is, and what events are happening on campus. The app is iOS-native and collects 0 user data, keeping the app onboarding clean and straightforward. Future improvements will focus on local caching so the app can be used in areas with poor internet coverage (e.g. Main Stacks Basement, Dwinelle Hall).",
-    source: "open",
-    tags: ["iOS", "Figma", "Swift", "Xcode", "UI/UX"],
-    links: [
-      {
-        label: "View Source on GitHub",
-        href: "https://github.com/JacobQuion/BearTracks_iOS_App",
-      },
-      {
-        label: "Web",
-        href: "https://beartracks-official.vercel.app/#",
-        tone: "red",
-      },
-    ],
-    image: "/beartracks-demo.jpg",
-    video: "/beartracks-demo.mp4",
   },
   {
     slug: "ghidorah",
