@@ -61,11 +61,11 @@ export const projects: Project[] = [
     links: [
       {
         label: "View Source on GitHub",
-        href: "https://github.com/JacobQuion/BearTracks_iOS_App",
+        href: "https://github.com/JacobQuion/BearRoute-iOS",
       },
       {
         label: "Web",
-        href: "https://beartracks-official.vercel.app/#",
+        href: "https://bearroute-official.vercel.app/#",
         tone: "red",
       },
     ],
