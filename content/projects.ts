@@ -52,10 +52,10 @@ export const projects: Project[] = [
   },
   {
     slug: "beartracks",
-    title: "BearTracks",
+    title: "Bear Route",
     tagline: "Campus In Your Pocket (iOS).",
     description:
-      "BearTracks is an all-in-one navigation app for UC Berkeley. You can view the best dining halls, study spots, how crowded the community gym is, and what events are happening on campus. The app is iOS-native and collects 0 user data, keeping the app onboarding clean and straightforward. Future improvements will focus on local caching so the app can be used in areas with poor internet coverage (e.g. Main Stacks Basement, Dwinelle Hall).",
+      "Bear Route is an all-in-one navigation app for UC Berkeley. You can view the best dining halls, study spots, how crowded the community gym is, and what events are happening on campus. The app is iOS-native and collects 0 user data, keeping the app onboarding clean and straightforward. Future improvements will focus on local caching so the app can be used in areas with poor internet coverage (e.g. Main Stacks Basement, Dwinelle Hall).",
     source: "open",
     tags: ["iOS", "Figma", "Swift", "Xcode", "UI/UX"],
     links: [
