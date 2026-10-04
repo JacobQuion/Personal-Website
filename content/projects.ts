@@ -39,16 +39,26 @@ export const projects: Project[] = [
     note: "Closed-source project. Details available upon request.",
   },
   {
-    slug: "sentinel",
-    title: "SENTINEL",
-    tagline: "Diagnosing Foreign LLM Prompts.",
+    slug: "plate-studio",
+    title: "Plate Studio",
+    tagline: "Video Ads for Small Restaurants.",
     description:
-      "A \"prompt injection\" occurs when a malicious instruction infiltrates a LLM. This can lead to a breach in security, causing the model to access sensitive files, tools, or other privileged resources. SENTINEL reveals that training data used to reinforce diagnostic frameworks is inadequate against foreign attacks. In short, we need better approaches to foreign prompt injections.",
-    source: "closed",
-    tags: ["LLMs", "AI Security", "Research"],
-    image: "/sentinel-demo.jpg",
-    video: "/sentinel-demo.mp4",
-    note: "Closed-source project. Details available upon request.",
+      "Most small restaurants don’t have the bandwidth or budget to make a video ad. But ads are important: they bring customers in the door. Plate Studio turns a Google Maps or Yelp link and a few dish photos into a complete, polished video ad. It pulls reviews and the menu, writes the script, then animates every dish and renders the whole video in one shot. Owners can adjust any scene by just telling Plate Studio what to change, then publish to YouTube, Instagram, TikTok, and Facebook in one click.",
+    source: "open",
+    tags: ["Gemini API", "AI Video", "FFmpeg", "Next.js", "TypeScript"],
+    links: [
+      {
+        label: "View Source on GitHub",
+        href: "https://github.com/JacobQuion/platestudioapp",
+      },
+      {
+        label: "Web",
+        href: "https://platestudiolanding.vercel.app/",
+        tone: "red",
+      },
+    ],
+    image: "/plate-studio-demo.jpg",
+    video: "/plate-studio-demo.mp4",
   },
   {
     slug: "beartracks",
@@ -73,26 +83,16 @@ export const projects: Project[] = [
     video: "/beartracks-demo.mp4",
   },
   {
-    slug: "station",
-    title: "Station",
-    tagline: "AI Manager for Academics.",
+    slug: "sentinel",
+    title: "SENTINEL",
+    tagline: "Diagnosing Foreign LLM Prompts.",
     description:
-      "In 1955, Northcote Parkinson wrote an essay for The Economist expressing “Work expands so as to fill the time available for its completion.” This idea is now known as “Parkinson’s Law,” which guides many productivity and study techniques. Station is no different, and embraces Parkinson’s Law to its fullest. With Google Calendar and Canvas integration, Station does the planning for you so you can just focus on the work itself.",
-    source: "open",
-    tags: ["API Requests", "AI Reasoning"],
-    links: [
-      {
-        label: "View Source on GitHub",
-        href: "https://github.com/JacobQuion/Station-Web-App",
-      },
-      {
-        label: "Web",
-        href: "https://station-landing-page.vercel.app/",
-        tone: "red",
-      },
-    ],
-    image: "/station-demo.jpg",
-    video: "/station-demo.mp4",
+      "A \"prompt injection\" occurs when a malicious instruction infiltrates a LLM. This can lead to a breach in security, causing the model to access sensitive files, tools, or other privileged resources. SENTINEL reveals that training data used to reinforce diagnostic frameworks is inadequate against foreign attacks. In short, we need better approaches to foreign prompt injections.",
+    source: "closed",
+    tags: ["LLMs", "AI Security", "Research"],
+    image: "/sentinel-demo.jpg",
+    video: "/sentinel-demo.mp4",
+    note: "Closed-source project. Details available upon request.",
   },
   {
     slug: "ghidorah",
