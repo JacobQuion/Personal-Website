@@ -84,7 +84,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sentinel",
-    title: "SENTINEL",
+    title: "Sentinel",
     tagline: "Diagnosing Foreign LLM Prompts.",
     description:
       "A \"prompt injection\" occurs when a malicious instruction infiltrates a LLM. This can lead to a breach in security, causing the model to access sensitive files, tools, or other privileged resources. SENTINEL reveals that training data used to reinforce diagnostic frameworks is inadequate against foreign attacks. In short, we need better approaches to foreign prompt injections.",
