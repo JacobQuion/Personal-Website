@@ -24,7 +24,7 @@ const socials: Social[] = [
 export const site = {
   name: "Jacob Quion",
   /** The hero headline cycles through these, one at a time. */
-  headlines: ["Jacob Quion", "CS @ UC Berkeley", "Building AI Products"],
+  headlines: ["Jacob Quion", "UC Berkeley CDSS", "Building AI Products"],
   /** Shown after the name in link previews (iMessage, Slack, etc.). */
   tagline: "Portfolio",
   // Production domain — powers OG tags and metadataBase.
